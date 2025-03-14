@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <StackLayout class="loading-container p-8 items-center justify-center">
+        <Image src="~/images/Full-Body-LCWeb.png" class="w-32 h-32 floating glowing" />
+        <Label text="LC SHIB" class="text-3xl font-bold gradient-text mt-4" />
+        <StackLayout class="w-3/4 h-2 mt-8 rounded-full glassmorphism">
+            <StackLayout id="progressBar" class="h-full rounded-full" backgroundColor="#00ffff" width="0%" />
+        </StackLayout>
+        <Label text="Loading..." class="text-white mt-4" />
+    </StackLayout>
+</Page>

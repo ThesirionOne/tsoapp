@@ -1,0 +1,55 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+    <ScrollView>
+        <StackLayout class="p-4">
+            <!-- Hero Section -->
+            <Image src="~/images/Banner05-LC.png" class="w-full h-48" stretch="aspectFill" />
+            <Image src="~/images/Full-Body-LCWeb.png" class="w-32 h-32 floating" />
+            <Label text="LC SHIB" class="text-3xl font-bold gradient-text text-center" />
+            
+            <!-- Trading Buttons -->
+            <GridLayout rows="auto" columns="*, *" class="mt-4">
+                <Button text="Trade on Raydium" tap="{{ onRaydiumTap }}" 
+                    class="glassmorphism text-white p-4 m-2" col="0" />
+                <Button text="View on CMC" tap="{{ onCMCTap }}"
+                    class="glassmorphism text-white p-4 m-2" col="1" />
+            </GridLayout>
+
+            <!-- Token Info -->
+            <GridLayout rows="auto" columns="*, *" class="mt-4 glassmorphism p-4">
+                <StackLayout col="0">
+                    <Label text="Supply" class="text-gray-400" />
+                    <Label text="1B" class="text-white font-bold" />
+                </StackLayout>
+                <StackLayout col="1">
+                    <Label text="Tax" class="text-gray-400" />
+                    <Label text="0%" class="text-white font-bold" />
+                </StackLayout>
+            </GridLayout>
+
+            <!-- Chart -->
+            <WebView src="https://www.dextools.io/widget-chart/es/solana/pe-light/CaysL4cjU1BuB9ECvhQ4yNQBVt7eug3GcZjndcJdf5JU?theme=dark"
+                class="h-96 mt-4" />
+
+            <!-- Features -->
+            <Label text="Features" class="text-2xl font-bold gradient-text mt-4" />
+            
+            <!-- LC AI BOT -->
+            <GridLayout columns="auto, *" class="glassmorphism p-4 mt-4">
+                <Image src="~/images/256pxLC.png" class="w-16 h-16" col="0" />
+                <StackLayout col="1" class="ml-4">
+                    <Label text="LC AI BOT" class="text-white font-bold" />
+                    <Label text="Interact with our AI assistant" class="text-gray-400" />
+                    <Button text="Chat Now" tap="{{ onChatTap }}" class="gradient-text" />
+                </StackLayout>
+            </GridLayout>
+
+            <!-- Social Links -->
+            <GridLayout rows="auto" columns="*, *, *, *" class="mt-4">
+                <Button text="𝕏" tap="{{ onTwitterTap }}" class="glassmorphism text-white" col="0" />
+                <Button text="TG" tap="{{ onTelegramTap }}" class="glassmorphism text-white" col="1" />
+                <Button text="Web" tap="{{ onWebsiteTap }}" class="glassmorphism text-white" col="2" />
+                <Button text="CMC" tap="{{ onCMCTap }}" class="glassmorphism text-white" col="3" />
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>
